@@ -411,14 +411,12 @@ function ContactItem({ icon, label, value, href }) {
    MAIN PORTFOLIO COMPONENT
    ═══════════════════════════════════════════════════════ */
 export default function Portfolio() {
-  const [scrollY, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
   const [navSolid, setNavSolid] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
       setNavSolid(window.scrollY > 50);
 
       const sections = ["hero", "about", "experience", "skills", "projects", "education", "contact"];
